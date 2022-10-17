@@ -1,0 +1,151 @@
+/*all: body*/
+body{
+	height: 500px;
+	background-color: #0E0f0f;
+	color: mintcream;
+}
+header{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #1A1F38;
+}
+h1 a{
+	color: mintcream;
+	text-decoration: none;
+}
+h1 a:hover{
+	color: mintcream;
+}
+header .nav-link{
+	padding-top: 15px;
+	color: mintcream;
+}
+
+/*index.html:  main body*/
+
+#head_nav{
+	background-image: url(files/cinema.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 680px;
+	padding-top: 580px;
+}
+#head_search{
+	width: 750px;
+}
+#head_search button{
+	background-color: dodgerblue;
+	border-radius: 0 5px 5px 0;
+}
+#head_nav .nav-link{
+	color: mintcream;
+	padding-left: 50px;
+}
+#head_nav .nav-link:hover{
+	color: royalblue;
+}
+#head_nav h2{
+	margin-top: 50px;
+}
+.lst_m_head{
+	margin-top: 30px;
+}
+.lst_m_head a{
+	text-decoration: none;
+	color: mintcream;
+	
+}
+.lst_m_head h5{
+	padding: 5px 6px;
+	border: 1px solid mediumblue;
+	background-color: blue;
+}
+.lst_m_head h5:hover{
+	color: black;
+	background-color: orange;
+	border-color: black;
+}
+.lst_movie{
+	display: inline-flex;
+}
+.lst_text{
+	margin-left: 30px;
+}
+.lst_text i{
+	padding-left: 20px;
+}
+.pgs a{
+	text-decoration: none;
+	color: mintcream;
+	border: 1px solid darkviolet;
+	background-color: darkviolet;
+	padding: 2px 5px;
+}
+.pgs a:hover{
+	color: black;
+	background-color: orange;
+	border-color: black;
+}
+#bttm{
+	margin-top: 60px;
+}
+
+/*detail.html: main body*/
+
+#deta{
+	margin-top: 40px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+#deta .container-fluid{
+	margin-top: 30px;
+}
+#deta h2{
+	font-family: fantasy;
+}
+#deta img{
+	width: 260px;
+	height: 400px;
+}
+#deta_info{
+	position: absolute;
+	left: 500px;
+	top: 200px;
+}
+#deta_info table td{
+	padding-top: 20px;
+	padding-right: 100px;
+}
+#deta_vid{
+	width: 710px;
+	height: 465px;
+}
+#deta_com button{
+	margin-top: 5px;
+	border-color: slategray;
+	background-color: darkslategray;
+}
+#deta_com button:hover{
+	background-color: darkcyan;
+}
+#deta_com ul{
+	margin-top: 20px;
+}
+
+/*all: footer*/
+footer{
+	margin-top: 50px;
+	background-color: #D9D9D9;
+	font-size: 10px;
+}
+footer .nav-link{
+	color: black;
+}
+footer .col-sm-2{
+	color: black;
+	padding-top: 7px;
+}
+#foot{
+	background-color: white;
+	text-align: center;
+	color: black;
+}

@@ -1,0 +1,33 @@
+{% extends 'cinema/base.html' %}
+{% load static %}
+{% block csslink %}
+<link rel="stylesheet" type="text/css" href="{% static 'logreg.css' %}">
+{% endblock %}
+{% block maincontent %}
+	<main class="container-fluid">
+		<form method="post">
+			{% csrf_token %}
+			<div align="center">
+				<table>
+					<tr>
+						<td><label><b>E-mail</b></label></td>
+						<td><input type="email" placeholder="Enter E-mail" name="email" required></td>
+					</tr>
+					<tr>
+						<td><label><b>Username</b></label></td>
+						<td><input type="text" placeholder="Enter Username" name="username" required></td>
+					</tr>
+					<tr>
+						<td><label><b>Password</b></label></td>
+						<td><input type="password" placeholder="Enter Password" name="password" required></td>
+					</tr>
+					<tr>
+						<td><label><b>Repeat Password</b></label></td>
+						<td><input type="password" placeholder="Repeat Password" name="repass" required></td>
+					</tr>
+				</table>
+				<button type="submit">Register</button>
+		    </div>
+		</form>
+	</main>
+{% endblock %}

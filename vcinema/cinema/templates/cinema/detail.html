@@ -1,0 +1,68 @@
+{% extends 'cinema/base.html' %}
+{% load static %}
+{% block csslink %}
+<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+{% endblock %}
+{% block maincontent %}
+	<main class="container-fluid">
+		<div class="row" id="deta">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-7">
+				<div class="container-fluid" align="center">
+					<h2>{{ movie.title }}</h2>
+				</div>
+				<div id="deta_info">
+					<table>
+						<tr>
+							<td>Rating:</td>
+							<td>{{ movie.rating }}</td>
+						</tr>
+						<tr>
+							<td>Date:</td>
+							<td>{{ movie.release_date }}</td>
+						</tr>
+						<tr>
+							<td>Age:</td>
+							<td>{{ movie.age_rest }}+</td>
+						</tr>
+						<tr>
+							<td>Directory:</td>
+							<td>{{ movie.directory }}</td>
+						</tr>
+					</table>
+				</div>
+				<div class="container-fluid">
+					<img src="{{ movie.photo.url }}">
+				</div>
+				<div class="container-fluid">
+					<h4>Overview</h4>
+					<p>{{ movie.article }}</p>
+				</div>
+				<div align="center" class="container-fluid">
+					<iframe id="deta_vid" src="{{ movie.video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="container-fluid" id="deta_com">
+					<h3>Comments:</h3>
+					<form method="post">
+						{% csrf_token %}
+						<textarea class="form-control" rows="1" id="comment" name="comment" placeholder="leave comment.."></textarea>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+					<ul>
+						{% for com in comments %}
+                  		<li>
+                  			<h5>{{ com.name }}</h5>
+                   			<span>{{ com.comment }}</span>
+                  		</li>
+                  		<hr>
+						{% endfor %}
+              		</ul>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<h3 align="center">Similar</h3>
+				<hr>
+			</div>
+		</div>
+	</main>
+{% endblock %}
